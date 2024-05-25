@@ -1,4 +1,9 @@
+import { useTranslation } from "react-i18next";
+
 const ThemeSwitcher = () => {
+    const { t } = useTranslation();     // Translation reference
+
+    // Declare a function that change the app's theme from light to dark and from dark to light
     const handleTheme = (e) => {
         document.documentElement.classList.toggle("dark");
         document.documentElement.classList.contains("dark")
@@ -11,7 +16,7 @@ const ThemeSwitcher = () => {
             <img 
                 src="/assets/sun.png"
                 alt="Theme"
-                title="theme"
+                title={t("Theme")}
                 className="switcher-btn"
             />
         </button>
