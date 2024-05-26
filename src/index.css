@@ -6,4 +6,8 @@
     .switcher-btn {
         @apply h-10 transition-all ease-in-out duration-200 hover:scale-105 cursor-pointer;
     }
+
+    .li {
+        @apply text-lg dark:text-white;
+    }
 }
