@@ -1,6 +1,10 @@
 import { forwardRef } from "react";
 
+import { useTranslation } from "react-i18next";
+
 const Dialog = forwardRef(({ children, toggleDialog }, ref) => {
+    const { t } = useTranslation();   // Translation reference
+
     return (
         <dialog
             className="w-11/12 lg:w-5/12 rounded-lg drop-shadow"
@@ -15,7 +19,7 @@ const Dialog = forwardRef(({ children, toggleDialog }, ref) => {
                 className="px-3 py-1 bg-blue-500 text-white font-medium text-lg rounded hover:bg-blue-600 active:bg-blue-400"
                     onClick={toggleDialog}
                 >
-                    Close
+                    {t("Close")}
                 </button>
             </div>
         </dialog>

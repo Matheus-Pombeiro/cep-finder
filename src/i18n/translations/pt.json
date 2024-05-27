@@ -2,6 +2,16 @@
     "translation": {
         "English": "Inglês",
         "Portuguese": "Português",
-        "Theme": "Tema"
+        "Theme": "Tema",
+        "CEP Finder": "Buscador de CEP",
+        "Know More": "Saiba Mais",
+        "State": "Estado",
+        "City": "Cidade",
+        "Neighborhood": "Bairro",
+        "Street": "Rua",
+        "What is CEP?": "O que é CEP?",
+        "CEP is the acronym for Postal Address Code, created and used by the Post Office to facilitate the routing and delivery of correspondence to recipients. The CEP is essential information in correspondence, as it identifies all the details of the address of the person receiving or sending the correspondence.": "CEP é a sigla para Código de Endereçamento Postal, criado e utilizado pelos Correios para facilitar o encaminhamento e entrega de correspondências aos destinatários. O CEP é uma informação essencial na correspondência, pois identifica todos os dados do endereço de quem recebe ou enviando a correspondência.",
+        "In Brazil, the CEP number is made up of eight digits, which identify the address of the recipient of the correspondence, facilitating its delivery.": "No Brasil, o número CEP é composto por oito dígitos, que identificam o endereço do destinatário da correspondência, facilitando sua entrega.",
+        "Close": "Fechar"
     }
 }

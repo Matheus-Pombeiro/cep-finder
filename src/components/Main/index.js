@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
 
+import { useTranslation } from "react-i18next";
+
 import { AiFillQuestionCircle } from "react-icons/ai";
 
 import Input from "../Input";
@@ -10,7 +12,7 @@ import Dialog from "../Dialog";
 const Main = () => {
     const [address, setAddress] = useState({});     // Declare an object that contains the address based on the cep
 
-    const [dialogContent, setDialogContent] = useState(null);
+    const [dialogContent, setDialogContent] = useState(null);   // Declare a state that helps the dialog tag to show the modal content
 
     // Declare a function that hadle the adress through an API using the CEP
     const handleAddress = (value) => {
@@ -34,8 +36,9 @@ const Main = () => {
         };
     };
 
-    const dialogRef = useRef(null);
+    const dialogRef = useRef(null);     // Set a reference to the dialog tag
 
+    // Opens and closes the modal
     const toggleDialog = () => {
         if (!dialogRef.current) return;
 
@@ -44,10 +47,12 @@ const Main = () => {
             : dialogRef.current.showModal();
     };
 
+    const { t } = useTranslation();   // Translation reference
+
     return (
         <main className="w-full h-full flex flex-col items-center gap-5">
             <section className="h-fit w-10/12 lg:w-7/12 xl:w-2/6 p-6 bg-white opacity-90 rounded-lg drop-shadow-lg flex flex-col justify-center items-center gap-4 dark:bg-neutral-700">
-                <h1 className="h1">CEP Finder</h1>
+                <h1 className="h1">{t("CEP Finder")}</h1>
                 <Input
                     changeAddress={(value) => handleAddress(value)} 
                 />
@@ -62,7 +67,7 @@ const Main = () => {
             >
                 <AiFillQuestionCircle 
                     size={80}
-                    title="Know More"
+                    title={t("Know More")}
                 />
             </button>
 
